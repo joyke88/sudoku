@@ -21,6 +21,22 @@ class PygameGUI():
         self.window = pg.display.set_mode((self.window_width, self.window_height))
         self.running = True
 
+        # initialize colors as RGB for repl.it
+        self.white = [255,255,255]
+        self.black = [0,0,0]
+        self.grey = [128,128,128]
+        self.orange = [255, 165, 0]
+        self.lime = [0, 255, 0]
+        self.springgreen = [0, 255, 127]
+        self.lightblue = [173,216,230]
+        self.magenta = [255, 0, 255]
+        self.darkmagenta = [139,0,139]
+        self.lavender = [230,230,250]
+        self.tomato = [255,99,71]
+        self.plum = [221,160,221]
+        self.paleturquoise = [175,238,238]
+        self.coral = [255,127,80]
+
         # initialize game grid
         self.board = None
         self.new_board()
@@ -29,29 +45,28 @@ class PygameGUI():
         self.cell_size = int(self.grid_size/9)
         self.grid_offset = (self.window_width - self.grid_size)/2
         self.grid_position = (self.grid_offset, self.grid_offset)
-        self.thick_border_color = "lightblue"
-        self.thin_border_color = "grey"
-        self.cell_selected_color = "orange"
-        self.cell_locked_color = "lavender"
-        self.cell_wrong_color = "tomato"
-        self.cell_correct_color = "lightgreen"
-
+        self.thick_border_color = self.lightblue
+        self.thin_border_color = self.grey
+        self.cell_selected_color = self.orange
+        self.cell_locked_color = self.lavender
+        self.cell_wrong_color = self.tomato
+        self.cell_correct_color = self.springgreen
 
         # initialize buttons
-        self.off_button_color = "lightblue"
-        self.on_button_color = "mediumpurple"
-        self.off_button_hover = "paleturquoise"
-        self.on_button_hover = "plum"
+        self.off_button_color = self.lightblue
+        self.on_button_color = self.darkmagenta
+        self.off_button_hover = self.paleturquoise
+        self.on_button_hover = self.plum
         self.playing_buttons = []
         self.play_again = []
 
         # initialize font
         self.font = pg.font.SysFont("arial", int(self.cell_size/2))
-        self.default_font_color = "black"
-        self.hint_font_color = "green"
-        self.solved_font_color = "magenta"
-        self.button_off_font_color = "black"
-        self.button_on_font_color = "white"
+        self.default_font_color = self.black
+        self.hint_font_color = self.lime
+        self.solved_font_color = self.magenta
+        self.button_off_font_color = self.black
+        self.button_on_font_color = self.white
 
         # initialize state flags
         self.cells_locked = []
@@ -67,7 +82,7 @@ class PygameGUI():
         self.hint_cell = None
 
         # initialize game win
-        self.win_circle_color = "coral"
+        self.win_circle_color = self.coral
 
         self.load()
 
@@ -185,7 +200,7 @@ class PygameGUI():
     """generate a display window for game"""
     def playing_display(self):
         # set background to white
-        self.window.fill("white")
+        self.window.fill(self.white)
 
         if self.win == False:
             # display each button in button array

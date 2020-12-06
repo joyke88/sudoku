@@ -7,6 +7,11 @@ Allow button objects to be created
 class Button:
     def __init__(self, width, height, x_cordinate, y_cordinate, off_color, on_color, off_hover, on_hover,
                  off_text_color, on_text_color, text = None, function = None):
+
+        # initialize colors as RGB for repl.it
+        self.white = [255,255,255]
+        self.black = [0,0,0]
+
         # initialize button class
         self.image = pg.Surface((width, height))
         self.btn_position = (x_cordinate, y_cordinate)
@@ -23,8 +28,8 @@ class Button:
         self.on_hover = on_hover
         self.function = function
         self.hover = False
-        self.button_text_color = "black"
-        self.win_button_text_color = "white"
+        self.button_text_color = self.white
+        self.win_button_text_color = self.black
         self.toggle = False
 
     """update button color based on hover status"""
