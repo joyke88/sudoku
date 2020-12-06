@@ -474,7 +474,6 @@ class PygameGUI():
 
         # check that board is complete
         self.board_complete()
-        print(self.solved_cells)
 
     """if cell is deleted or changed remove cell from solved"""
     def remove_solved_cells(self):
@@ -666,8 +665,8 @@ class PygameGUI():
         self.win = True
 
         # display win circle
-        pg.draw.circle(self.window, self.win_circle_color, (int((self.grid_size/2) + self.grid_offset),
-                                            int((self.grid_size/2) + self.grid_offset)),(self.window_width/4))
+        pg.draw.circle(self.window, self.win_circle_color, (int((self.grid_size/2) + int(self.grid_offset)),
+                                            int((self.grid_size/2) + int(self.grid_offset))),int(self.window_width/4))
 
         # initialize font
         font = pg.font.SysFont("arial", 35, bold=1)
