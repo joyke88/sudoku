@@ -184,7 +184,9 @@ class SudokuBoard():
 
     """print sudoku board to console for testing purposes"""
     def print_sudoku(self):
-
+        print(f'\n{ConsoleColors.YELLOW}---- INSTRUCTIONS ----{ConsoleColors.RESET}')
+        print(f'  - Input a number 1 to 9 using the keyboard')
+        print(f'  - Remove an input using backspace or delete keys')
         print(f'\n{ConsoleColors.YELLOW}---- SOLVED BOARD ----{ConsoleColors.RESET}')
         print(f'  - User input in {ConsoleColors.RED} RED {ConsoleColors.RESET}')
         print(f'  - Locked cells in {ConsoleColors.BOLD}WHITE{ConsoleColors.RESET}')

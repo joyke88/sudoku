@@ -272,7 +272,7 @@ class PygameGUI():
     def display_title(self):
         # initialize font
         font = pg.font.SysFont("arial", 35, bold=1)
-        text = font.render("SUDOKU", False, "black")
+        text = font.render("SUDOKU", False, self.black)
 
         # determine text size
         text_width, text_height = text.get_size()
