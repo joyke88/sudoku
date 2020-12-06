@@ -670,7 +670,7 @@ class PygameGUI():
 
         # initialize font
         font = pg.font.SysFont("arial", 35, bold=1)
-        text = font.render("You Win!", False, "white")
+        text = font.render("You Win!", False, self.white)
 
         # determine text size
         text_width, text_height = text.get_size()
