@@ -1,32 +1,30 @@
 """
-Rules of SUDOKO:
-    1.) Place a number of 1 to 9 in each cell
-    2.) Ensure there are no duplicate digits in a row, in a column, or in a sub grid.
-    3.) Complete every the puzzle without breaking the rule in step 2.
+Extra Credit Completed:
+    1.) Pygame GUI (+3)
+    2.) Solver (in sudokuBoardClass.py) (+2)
+    3.) Randomly generated valid puzzles (+1)
+    4.) NP-Complete proof (in pdf) (+2)
 
-Game instructions:
-    1.) Use the mouse to select a free cell
-    2.) Use the number keys to input a digit
-    3.) Use the delete or backspace keys to remove an input
+Sudoku Rules:
+    1.) Every puzzle is randomly generated with exactly one correct solution and exactly 27 free clues.
+    2.) Each of the 9 sub-grids must contain the digits 1-9.
+    3.) Each number can only appear once in a row, column or sub-grid.
+
+How to play:
+    1.) Select any cell by left clicking on it.
+    2.) Input digits with the number keys on your keyboard.
+    3.) Remove inputs with the delete key or backspace key.
+    4.) Toggle "Check" on when you have completed the game to see if you win.
 
 Game features:
-    1.) Automatically generates a random and valid suduko game
-        a.) Each puzzle generated has exaclty 1 solution to ensure validity
-        b.) Each puzzle generated has exactly 27 free hints given
-
-    2.) The game includes an automatic solver.
+    1.) "Solve" with automatically solve any blank or incorrect cells. Solved cells will be displayed in pink.
         a.) Please note that the logic for solving the puzzle is in "sudokuBoardClass.py"
         b.) "pygameGuiClass.py" simply refers to a copy of the solved puzzle in order to avoid duplicate code.
         c.) For ease of grading, the solved board is printed to console, with the user input values marked red.
-
-    3.) The game ensures validity of the users solution and displays "you win" upon clicking "check" with a complete puzzle.
-
-    4.) The game enforces SUDOKU rules, which can be visually verified in real time with the "check button".
-
-    5.) The game can provide a single hint at a time if stuck by clicking "hint"
-        a.) The hint shows the correct value of the first cell breaking SUDOKU rules or equaling None
-
-    6.) At any time you can randomly generate a new valid board by clicking "new"
+    2.)"New" will generate a new random valid puzzle.
+    3.) "Hint" will give you a single additional clue. It will display the correct value for the first cell being blank or marked as breaking the Sudoku rule set.
+    4.) "Check" will display invalid duplicate's in a sub-grid, column, or row as red. If the cell is a valid input, it will be displayed as green.
+    5.) "Reset" will clear the puzzle to the beginning state.
 """
 
 # References:
