@@ -1,10 +1,4 @@
 """
-Extra Credit Completed:
-    1.) Pygame GUI (+3)
-    2.) Solver (in sudokuBoardClass.py) (+2)
-    3.) Randomly generated valid puzzles (+1)
-    4.) NP-Complete proof (in pdf) (+2)
-
 Sudoku Rules:
     1.) Every puzzle is randomly generated with exactly one correct solution and exactly 27 free clues.
     2.) Each of the 9 sub-grids must contain the digits 1-9.
@@ -26,12 +20,6 @@ Game features:
     4.) "Check" will display invalid duplicate's in a sub-grid, column, or row as red. If the cell is a valid input, it will be displayed as green.
     5.) "Reset" will clear the puzzle to the beginning state.
 """
-
-# References:
-    # Backtracking: Back to Back SWE --> https://www.youtube.com/watch?v=JzONv5kaPJM
-    # Rules on creating a valid board: https://www.sudokuwiki.org/Sudoku_Creation_and_Grading.pdf
-    # Referenced pygame docs: https://www.pygame.org/docs/
-    # Referenced A Plus Coding tutorials to help with pygame: https://www.youtube.com/watch?v=r_cmJBgrq5k&t=752s
 
 from pygameGuiClass import PygameGUI
 
